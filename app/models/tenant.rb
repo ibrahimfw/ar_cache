@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Tenant < ApplicationRecord
+  include TenantCacheConcern
 
   has_one :domain_config, dependent: :delete
   has_one :subscription, dependent: :delete
