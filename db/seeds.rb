@@ -16,7 +16,7 @@ end
 if tenant.subscription
   puts "Subscription [#{tenant.subscription}] exists for tenant"
 else
-  subscription = Subscription.create(name: 'Enterprise', tenant: tenant)
+  subscription = Billing::Subscription.create(name: 'Enterprise', tenant: tenant)
   puts "Created subscription: [#{subscription}] for tenant: #{tenant}"
 end
 
