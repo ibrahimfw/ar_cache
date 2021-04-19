@@ -9,7 +9,7 @@ module TenantCacheConcern
 
   def domain_config_from_cache
     Cache.fetch(domain_config_key) do
-      domain_config
+      DomainConfig.find_by(tenant_id: id)
     end
   end
 
