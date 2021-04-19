@@ -1,7 +1,7 @@
 defaults: &defaults
   servers:
     - localhost:11211
-  namespace: ar
+  namespace: dr
   socket_max_failures: 4
   down_retry_delay: 30
 
